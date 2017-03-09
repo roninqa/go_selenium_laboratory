@@ -3,12 +3,6 @@
   This is my playground for Selenium test automation in Go.
 ```
 
-##Credits
-```
-  * Project, https://github.com/tebeka/selenium  
-  * Code example, https://github.com/tebeka/selenium/blob/master/doc.go  
-```
-
 ###My Notes
 ```
   1. Run your version of the .jar. e.g., java -jar selenium-server-standalone-2.24.1.jar  
