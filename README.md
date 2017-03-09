@@ -13,8 +13,8 @@
 
 ###Credits
 ```
-Shout out to Todd McLeod! Thank you for your Udemy classes. Invaluable knowledge, for sure! I hope you don't mind me barrowing you're folder naming convention :)
- 
+Shout out to Todd McLeod! Thank you for your Udemy classes. Invaluable knowledge, for sure! I hope you don't mind me barrowing your folder naming convention :)
+
 Todd's Udemy courses:
 1. How to Create A Website: An HTML Tutorial and Css Tutorial...
 2. Learn How to Code: Google's Go (golang) Programming...
