@@ -8,6 +8,9 @@ import (
 	"regexp"
 )
 
+var templates = template.Must(template.ParseGlob("tmpl/*.gohtml"))
+var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
+
 // Page struct for interconnected pages
 type Page struct {
 	Title string
@@ -16,7 +19,7 @@ type Page struct {
 
 func (p *Page) save() error {
 	filename := p.Title + ".txt"
-	return ioutil.WriteFile(filename, p.Body, 0600)
+	return ioutil.WriteFile("./data/"+filename, p.Body, 0600)
 }
 
 func loadPage(title string) (*Page, error) {
@@ -83,9 +86,6 @@ func getTitle(w http.ResponseWriter, r *http.Request) (string, error) {
 	}
 	return m[2], nil
 }
-
-var templates = template.Must(template.ParseFiles("edit.gohtml", "view.gohtml"))
-var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
 
 func main() {
 	http.HandleFunc("/view/", makeHandler(viewHandler))
