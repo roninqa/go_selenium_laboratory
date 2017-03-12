@@ -1,0 +1,15 @@
+#edit-atf {
+/* layout */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background */
+    background-color: #5b5b5b;
+    background-image: url("../img/learning.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*background-origin: border-box;*/
+    background-attachment: fixed;
+}
