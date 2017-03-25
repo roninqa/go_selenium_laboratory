@@ -15,10 +15,11 @@ func TestIsSaveBtnThere(t *testing.T) {
 	defer driver.Quit()
 
 	driver.Get("localhost:8080/edit/fooBar")
-
-	saveBtn, err := driver.FindElement(selenium.ByID, "savebtn")
-	if err != nil {
-		panic(err)
+	savebtn, _ := driver.FindElement(selenium.ByID, "savebtn")
+	if true, err := savebtn.IsDisplayed(); err == nil {
+		t.Log("PASSED", true)
+	} else {
+		t.Errorf("FAILED: Button is not displayed: %s\n", err)
 	}
-	saveBtn.IsDisplayed()
+
 }
