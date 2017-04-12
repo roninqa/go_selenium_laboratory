@@ -13,8 +13,7 @@
 
 ### Credits
 ```
-Todd McLoed Udemy courses:
-1. How to Create A Website: An HTML Tutorial and Css Tutorial...
-2. Learn How to Code: Google's Go (golang) Programming...
-3. Web Development w/ Google's Go (golang) Programming...
+ Todd McLoed Udemy courses
+ https://golang.org/pkg/testing/
+ https://github.com/tebeka/selenium
 ```
