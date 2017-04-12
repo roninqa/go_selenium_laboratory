@@ -1,6 +1,6 @@
 # Selenium Go
 ```
-  This is my playground for Testing & Selenium tests automation in Go. 
+  This is my playground for Testing & Selenium tests automation in Go.
 ```
 
 ## My Notes
