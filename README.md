@@ -13,7 +13,7 @@
 
 ### Credits
 ```
-* Todd McLoed Udemy courses
-* https://golang.org/pkg/testing/
-* https://github.com/tebeka/selenium
+ - Todd McLoed Udemy courses
+ - https://golang.org/pkg/testing/
+ - https://github.com/tebeka/selenium
 ```
