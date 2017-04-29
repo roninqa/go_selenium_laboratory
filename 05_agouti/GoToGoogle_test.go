@@ -6,6 +6,7 @@ import (
 	"github.com/sclevine/agouti"
 )
 
+// Playing around with http://agouti.org/
 func TestGoToGoogle(t *testing.T) {
 	driver := agouti.Selenium()
 	if err := driver.Start(); err != nil {
