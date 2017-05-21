@@ -1,0 +1,18 @@
+Got: Hello WebDriver!
+
+
+Program exited.
+Got: Hello WebDriver!
+
+
+Program exited.
+Got: Hello WebDriver!
+
+
+Program exited.
+Got: Hello WebDriver!
+
+
+Program exited.
+PASS
+ok  	github.com/roninqa/go_selenium_laboratory/01_runMany_test	8.882s

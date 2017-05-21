@@ -3,6 +3,7 @@ package main
 
 import (
 	"testing"
+	"time"
 
 	"github.com/tebeka/selenium"
 )
@@ -13,15 +14,17 @@ func TestShouldBeOnTheCorrectPage(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
+	driver.SetImplicitWaitTimeout(time.Millisecond * 30000)
+	driver.SetAsyncScriptTimeout(time.Millisecond * 30000)
+	driver.SetPageLoadTimeout(time.Millisecond * 30000)
 	defer driver.Quit()
 
 	driver.Get("http://the-internet.herokuapp.com/")
 	h1, err := driver.FindElement(selenium.ByTagName, "h1")
 	if err != nil {
-		t.Errorf("ERROR: Cannot find h1: %v\n", err)
-	} else if context, _ := h1.Text(); context == "Welcome to the Internet" {
-		t.Logf("PASSED: The context of h1: %v\n", context)
-	} else {
-		t.Errorf("ERROR: The context does not match.")
+		panic(err)
 	}
+
+	t.Log(h1.Text())
+
 }
