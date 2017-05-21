@@ -25,6 +25,10 @@ func TestShouldBeOnTheCorrectPage(t *testing.T) {
 		panic(err)
 	}
 
-	t.Log(h1.Text())
+	// Text func() (string, error); returns a string and error
+	// set 'there' to the string and throw away the error
+	if there, _ := h1.Text(); there != "Welcome to the Internet" {
+		t.Errorf("FAIL: Text is, %s\n", there)
+	}
 
 }
