@@ -1,5 +1,5 @@
 // Exercises using http://the-internet.herokuapp.com/
-package main
+package tests
 
 import (
 	"testing"
@@ -8,7 +8,7 @@ import (
 	"github.com/tebeka/selenium"
 )
 
-func TestShouldBeOnTheCorrectPage(t *testing.T) {
+func TestShouldBeOnTheCorrectPageI(t *testing.T) {
 	caps := selenium.Capabilities{"browserName": "chrome"}
 	driver, err := selenium.NewRemote(caps, "")
 	if err != nil {
