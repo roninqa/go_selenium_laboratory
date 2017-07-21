@@ -1,23 +1,15 @@
 package main
 
 import (
-	"testing"
-	"time"
-
 	"fmt"
+	"testing"
 
+	"github.com/roninqa/webdriver"
 	"github.com/tebeka/selenium"
 )
 
-func TestShouldBeOnTheCorrectPageI(t *testing.T) {
-	caps := selenium.Capabilities{"browserName": "chrome"}
-	driver, err := selenium.NewRemote(caps, "")
-	if err != nil {
-		panic(err)
-	}
-	driver.SetImplicitWaitTimeout(time.Millisecond * 30000)
-	driver.SetAsyncScriptTimeout(time.Millisecond * 30000)
-	driver.SetPageLoadTimeout(time.Millisecond * 30000)
+func TestShouldUseThePackage(t *testing.T) {
+	driver := webdriver.SetUpChrome()
 	defer driver.Quit()
 
 	driver.Get("http://the-internet.herokuapp.com/")
@@ -28,4 +20,5 @@ func TestShouldBeOnTheCorrectPageI(t *testing.T) {
 		fmt.Println("li are: ", l)
 	}
 
+	t.Log("hello, world")
 }
