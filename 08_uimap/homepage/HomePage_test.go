@@ -25,14 +25,14 @@ func TestShouldBeAbleToClickOnABTesting(t *testing.T) {
 	driver.Get("http://the-internet.herokuapp.com/")
 
 	// Click on the AB Testing link
-	abtesting, err := driver.FindElement(selenium.ByLinkText, uimap.LnkABTesting)
+	abtesting, err := driver.FindElement(selenium.ByLinkText, uimap.HomepageLnkABTesting)
 	if err != nil {
 		t.Log("***ERROR with abtesting: ", err)
 	}
 	abtesting.Click()
 
 	// Validate you're in the AB Testing page
-	h3, err := driver.FindElement(selenium.ByTagName, uimap.PgABTest)
+	h3, err := driver.FindElement(selenium.ByTagName, uimap.ABPageABTest)
 	if err != nil {
 		t.Log("***ERROR with h3: ", err)
 	}
@@ -60,7 +60,7 @@ func TestShouldBeAbleToClickOnCheckBoxes(t *testing.T) {
 	driver.Get("http://the-internet.herokuapp.com/")
 
 	// Click on the Checkboxes link
-	checkBoxes, err := driver.FindElement(selenium.ByXPATH, uimap.LnkCheckBoxes)
+	checkBoxes, err := driver.FindElement(selenium.ByXPATH, uimap.HompageLnkCheckBoxes)
 	if err != nil {
 		t.Log("***ERROR with checkBoxes: ", err)
 	}
